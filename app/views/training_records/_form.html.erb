@@ -1,0 +1,28 @@
+<%= form_with(model: training_record, class: "space-y-6") do |form| %>
+  <% if training_record.errors.any? %>
+    <div class="bg-red-50 text-red-600 px-4 py-3 rounded-lg">
+      <h2 class="font-bold mb-2"><%= training_record.errors.count %>件のエラーがあります：</h2>
+      <ul class="list-disc ml-6">
+        <% training_record.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :trained_on, "トレーニング日", class: "block text-sm font-medium text-gray-700 mb-2" %>
+    <%= form.date_field :trained_on, value: training_record.trained_on || Date.today, class: "block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-4 py-2" %>
+  </div>
+
+  <div>
+    <%= form.label :content, "トレーニング内容", class: "block text-sm font-medium text-gray-700 mb-2" %>
+    <%= form.text_area :content, rows: 8, placeholder: "例：\nベンチプレス 60kg×10, 65kg×8, 70kg×5\nダンベルフライ 20kg×12×3\nケーブルクロスオーバー 15kg×15×3", class: "block w-full rounded-lg border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 px-4 py-2" %>
+    <p class="mt-1 text-sm text-gray-500">今日行ったトレーニングメニューを自由に記入してください</p>
+  </div>
+
+  <div class="flex space-x-3">
+    <%= form.submit "保存", class: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium cursor-pointer" %>
+    <%= link_to "キャンセル", training_records_path, class: "bg-gray-300 hover:bg-gray-400 text-gray-800 px-6 py-3 rounded-lg font-medium" %>
+  </div>
+<% end %>
