@@ -1,0 +1,42 @@
+<div class="max-w-4xl mx-auto text-center">
+  <h1 class="text-5xl font-bold text-gray-800 mb-6">TrainLog</h1>
+  <p class="text-2xl text-gray-600 mb-8">トレーニングを記録して、楽しく継続しよう</p>
+
+  <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+    <h2 class="text-2xl font-bold text-gray-800 mb-4">TrainLogとは？</h2>
+    <p class="text-gray-600 mb-4">
+      日々のトレーニング内容を自由に記録・共有できる筋トレ記録アプリです。<br>
+      自分のトレーニング履歴を可視化し、継続をサポートします。<br>
+      「楽しく続けること」を目的に、トレーニングの習慣化を後押しします。
+    </p>
+  </div>
+
+  <div class="bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg shadow-lg p-8 text-white mb-8">
+    <h2 class="text-2xl font-bold mb-4">今日からトレーニング記録を始めよう</h2>
+    <p class="mb-6">無料で始められます。まずはアカウントを作成してください。</p>
+    <div class="flex justify-center space-x-4">
+      <%= link_to "新規登録", new_user_registration_path, class: "bg-white text-blue-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-bold text-lg shadow" %>
+      <%= link_to "ログイン", new_user_session_path, class: "bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 rounded-lg font-bold text-lg shadow" %>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div class="bg-white rounded-lg shadow p-6">
+      <div class="text-4xl mb-4">📝</div>
+      <h3 class="text-xl font-bold text-gray-800 mb-2">シンプルな記録</h3>
+      <p class="text-gray-600">今日やったトレーニングを自由に記入するだけ。細かい入力は不要です。</p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow p-6">
+      <div class="text-4xl mb-4">📊</div>
+      <h3 class="text-xl font-bold text-gray-800 mb-2">履歴の可視化</h3>
+      <p class="text-gray-600">過去の記録を一覧で確認。継続日数や達成感を実感できます。</p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow p-6">
+      <div class="text-4xl mb-4">💪</div>
+      <h3 class="text-xl font-bold text-gray-800 mb-2">継続をサポート</h3>
+      <p class="text-gray-600">トレーニングを習慣化するための機能を今後追加予定です。</p>
+    </div>
+  </div>
+</div>
