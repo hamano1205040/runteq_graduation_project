@@ -18,7 +18,7 @@
 
 データベース設計のER図はこちらで確認できます。
 
-https://i.gyazo.com/a7ad6286e29aa00a4ce0b78790e6e187.png
+https://gyazo.com/a7ad6286e29aa00a4ce0b78790e6e187
 
 ---
 
