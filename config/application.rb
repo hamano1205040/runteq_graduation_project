@@ -31,6 +31,15 @@ module RunteqGraduationProject
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # デフォルトのロケールを日本語に設定
+    config.i18n.default_locale = :ja
+
+    # タイムゾーンを日本時間に設定
+    config.time_zone = "Tokyo"
+
+    # データベースの時刻をUTCで保存
+    config.active_record.default_timezone = :utc
+
     # Don't generate system test files.
     config.generators.system_tests = nil
   end

@@ -45,6 +45,12 @@ gem "jbuilder"
 # Use Devise for authentication
 gem "devise"
 
+# I18n (国際化) - Rails日本語化
+gem "rails-i18n"
+
+# Devise日本語化
+gem "devise-i18n"
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
